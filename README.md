@@ -173,19 +173,6 @@ as one logical payment: each segment's fields are merged into the same
 occurrence, and the group is only resolved once the sequence number
 changes or the batch trailer is reached.
 
-## Roadmap
-
-1. ~~Public API and streaming infrastructure~~ (this repository).
-2. ~~First layout parser: Itaú CNAB240~~.
-3. ~~Single public package; built-in layout parsers hidden under
-   `internal/`~~.
-4. Expand the canonical `Occurrence` model and Itaú segment coverage
-   (Segment B/C, more detail record formats) as more of a return file's
-   business information becomes worth extracting.
-5. Broader bank coverage.
-
-Remittance/export support is not planned for the first milestones.
-
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE).
