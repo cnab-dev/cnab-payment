@@ -156,8 +156,11 @@ in `internal/itau240` and is not importable directly. It detects and
 streams Itaú CNAB240 payment return files, extracting per logical payment
 a `PaymentID` and an occurrence `RawType` from the
 batch's mandatory segment (A for crédito em conta, J for boleto, or O for
-boleto de outro banco), plus an optional `ConfirmationID` from a Segment Z
-detail record when one follows it. `CreatedAt` is the return file's own
+boleto de outro banco), plus an optional `ConfirmationID` and `ExternalID`
+from a Segment Z detail record when one follows it — `ConfirmationID` is a
+bank-issued confirmation identifier, `ExternalID` a bank-generated
+identifier, both empty when no Segment Z is present. `CreatedAt` is the
+return file's own
 generation date/time, taken from the file header (assumed to be Brasília
 time, UTC-3) and attached to every occurrence in the file.
 

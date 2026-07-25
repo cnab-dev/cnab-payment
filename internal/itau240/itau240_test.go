@@ -80,6 +80,15 @@ func segmentZBytes(batch, seq, confirmationID string) []byte {
 	return raw
 }
 
+// segmentZBytesWithExternalID builds a Segment Z record like
+// segmentZBytes, additionally setting the bank-generated external ID
+// field — used to exercise ExternalID extraction.
+func segmentZBytesWithExternalID(batch, seq, confirmationID, externalID string) []byte {
+	raw := segmentZBytes(batch, seq, confirmationID)
+	setField(raw, segmentZExternalIDStart, segmentZExternalIDEnd, externalID)
+	return raw
+}
+
 func batchTrailerBytes(batch string) []byte {
 	raw := blank()
 	setField(raw, 3, 7, batch)
@@ -424,6 +433,63 @@ func TestParse_NoSegmentZPresent_LeavesConfirmationIDEmpty(t *testing.T) {
 	}
 	if got := occurrences[0].ConfirmationID; got != "" {
 		t.Errorf("ConfirmationID = %q, want empty when no Segment Z is present", got)
+	}
+}
+
+func TestParse_SegmentZPresent_AddsExternalID(t *testing.T) {
+	lines := [][]byte{
+		fileHeaderBytes(bankCode, fileKindRetorno, "19072026120000"),
+		batchHeaderBytes("0001"),
+		detailBytes("0001", "00002", 'A', "PAY-1", "02"),
+		segmentZBytesWithExternalID("0001", "00002", "CONF-123", "EXT-456"),
+		batchTrailerBytes("0001"),
+		fileTrailerBytes(),
+	}
+	first, s := setupScanner(t, lines)
+
+	var occurrences []core.Occurrence
+	var recordErrs []core.RecordError
+	_, err := New().Parse(s, first,
+		func(o core.Occurrence) error { occurrences = append(occurrences, o); return nil },
+		func(re core.RecordError) error { recordErrs = append(recordErrs, re); return nil },
+	)
+	if err != nil {
+		t.Fatalf("Parse() error = %v, want nil", err)
+	}
+	if len(recordErrs) != 0 {
+		t.Fatalf("got %d record errors, want 0: %v", len(recordErrs), recordErrs)
+	}
+	if len(occurrences) != 1 {
+		t.Fatalf("got %d occurrences, want 1", len(occurrences))
+	}
+	if got := occurrences[0].ExternalID; got != "EXT-456" {
+		t.Errorf("ExternalID = %q, want EXT-456", got)
+	}
+}
+
+func TestParse_NoSegmentZPresent_LeavesExternalIDEmpty(t *testing.T) {
+	lines := [][]byte{
+		fileHeaderBytes(bankCode, fileKindRetorno, "19072026120000"),
+		batchHeaderBytes("0001"),
+		detailBytes("0001", "00002", 'A', "PAY-1", "02"),
+		batchTrailerBytes("0001"),
+		fileTrailerBytes(),
+	}
+	first, s := setupScanner(t, lines)
+
+	var occurrences []core.Occurrence
+	_, err := New().Parse(s, first, func(o core.Occurrence) error {
+		occurrences = append(occurrences, o)
+		return nil
+	}, nil)
+	if err != nil {
+		t.Fatalf("Parse() error = %v, want nil", err)
+	}
+	if len(occurrences) != 1 {
+		t.Fatalf("got %d occurrences, want 1", len(occurrences))
+	}
+	if got := occurrences[0].ExternalID; got != "" {
+		t.Errorf("ExternalID = %q, want empty when no Segment Z is present", got)
 	}
 }
 

@@ -201,6 +201,9 @@ func (p *parseState) flushCurrentDetail() error {
 		if f.ConfirmationID != "" {
 			fields.ConfirmationID = f.ConfirmationID
 		}
+		if f.ExternalID != "" {
+			fields.ExternalID = f.ExternalID
+		}
 		if f.Segment != 0 {
 			fields.Segment = f.Segment
 		}
@@ -217,6 +220,7 @@ func (p *parseState) flushCurrentDetail() error {
 		RawType:        fields.RawType,
 		Type:           classifyRawType(fields.RawType),
 		ConfirmationID: fields.ConfirmationID,
+		ExternalID:     fields.ExternalID,
 		CreatedAt:      p.createdAt,
 		Format:         core.NewReceiptFormat(bankCode, fields.Segment, p.currentPaymentType, p.currentPaymentMethod),
 	}); err != nil {
