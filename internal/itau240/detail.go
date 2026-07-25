@@ -60,6 +60,7 @@ type occurrenceFields struct {
 	PaymentID      string
 	RawType        string
 	ConfirmationID string
+	ExternalID     string
 
 	// Segment is the mandatory segment (A, J, O, or N) that contributed
 	// PaymentID/RawType, used as the "S" component of ReceiptFormat.
@@ -143,14 +144,19 @@ func extractSegmentN(d detail) (occurrenceFields, bool) {
 }
 
 // segmentZConfirmationIDStart/End mark the confirmation identifier field
-// within Segment Z. Segment Z's layout is not part of the well-known
-// Febraban Segment A/B/C set this parser otherwise follows, so this
-// position is a placeholder assumption — verify against Itaú's official
-// manual before relying on it in production.
-const segmentZConfirmationIDStart, segmentZConfirmationIDEnd = 14, 78
+// within Segment Z. segmentZExternalIDStart/End mark a bank-generated
+// identifier field (columns 104-118). Segment Z's layout is not part of
+// the well-known Febraban Segment A/B/C set this parser otherwise
+// follows, so these positions are placeholder assumptions — verify
+// against Itaú's official manual before relying on them in production.
+const (
+	segmentZConfirmationIDStart, segmentZConfirmationIDEnd = 14, 78
+	segmentZExternalIDStart, segmentZExternalIDEnd         = 103, 118
+)
 
 func extractSegmentZ(d detail) (occurrenceFields, bool) {
 	return occurrenceFields{
 		ConfirmationID: strings.TrimSpace(string(d.Raw[segmentZConfirmationIDStart:segmentZConfirmationIDEnd])),
+		ExternalID:     strings.TrimSpace(string(d.Raw[segmentZExternalIDStart:segmentZExternalIDEnd])),
 	}, true
 }

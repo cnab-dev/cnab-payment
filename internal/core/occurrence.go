@@ -29,6 +29,11 @@ type Occurrence struct {
 	// such identifier was reported.
 	ConfirmationID string
 
+	// ExternalID is a bank-generated identifier for this payment, read
+	// from Segment Z when the return file provides one. It is empty when
+	// no Segment Z is present.
+	ExternalID string
+
 	// CreatedAt is the return file's generation date and time, as
 	// reported by its file header.
 	CreatedAt time.Time
