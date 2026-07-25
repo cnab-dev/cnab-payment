@@ -32,4 +32,12 @@ type Occurrence struct {
 	// CreatedAt is the return file's generation date and time, as
 	// reported by its file header.
 	CreatedAt time.Time
+
+	// Format is the BBB-S-TT-FF receipt template key: bank compensation
+	// code, batch segment, and the batch header's "Tipo de
+	// Serviço"/"Forma de Lançamento" codes. It is populated for every
+	// occurrence, regardless of Type — receipts are only meaningful for
+	// OccurrenceTypeSettled, but the key itself describes the
+	// batch/segment, not the outcome.
+	Format ReceiptFormat
 }

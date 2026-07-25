@@ -35,6 +35,16 @@ func batchHeaderBytes(batch string) []byte {
 	return raw
 }
 
+// batchHeaderBytesWithPayment builds a batch header record like
+// batchHeaderBytes, additionally setting the "Tipo de Serviço"/"Forma de
+// Lançamento" fields — used to exercise ReceiptFormat construction.
+func batchHeaderBytesWithPayment(batch, paymentType, paymentMethod string) []byte {
+	raw := batchHeaderBytes(batch)
+	setField(raw, batchHeaderPaymentTypeStart, batchHeaderPaymentTypeEnd, paymentType)
+	setField(raw, batchHeaderPaymentMethodStart, batchHeaderPaymentMethodEnd, paymentMethod)
+	return raw
+}
+
 func detailBytes(batch, seq string, segment byte, paymentID, rawType string) []byte {
 	raw := blank()
 	setField(raw, 3, 7, batch)
@@ -270,6 +280,59 @@ func TestParse_MandatorySegmentVariants_ExtractsPaymentIDAndRawType(t *testing.T
 			}
 			if occurrences[0].PaymentID != "PAY-1" || occurrences[0].RawType != "02" {
 				t.Errorf("occurrence = %+v, want PaymentID=PAY-1 RawType=02", occurrences[0])
+			}
+		})
+	}
+}
+
+// TestParse_BuildsReceiptFormat covers real Tipo de Serviço/Forma de
+// Lançamento combinations (mirroring conapag-cnab's loteSpecs table) to
+// document the expected BBB-S-TT-FF key per payment kind and catch
+// regressions in batch header field positions.
+func TestParse_BuildsReceiptFormat(t *testing.T) {
+	tests := []struct {
+		name          string
+		segment       byte
+		idStart       int
+		idEnd         int
+		paymentType   string
+		paymentMethod string
+		want          core.ReceiptFormat
+	}{
+		{"transferChecking_ted", 'A', segmentAPaymentIDStart, segmentAPaymentIDEnd, "20", "41", "341-A-20-41"},
+		{"transferPix", 'A', segmentAPaymentIDStart, segmentAPaymentIDEnd, "20", "45", "341-A-20-45"},
+		{"transferCorrente", 'A', segmentAPaymentIDStart, segmentAPaymentIDEnd, "20", "01", "341-A-20-01"},
+		{"transferPoupanca", 'A', segmentAPaymentIDStart, segmentAPaymentIDEnd, "20", "05", "341-A-20-05"},
+		{"transferSalario", 'A', segmentAPaymentIDStart, segmentAPaymentIDEnd, "30", "01", "341-A-30-01"},
+		{"boletoItau", 'J', segmentJPaymentIDStart, segmentJPaymentIDEnd, "20", "30", "341-J-20-30"},
+		{"boletoOutrosBancos", 'J', segmentJPaymentIDStart, segmentJPaymentIDEnd, "20", "31", "341-J-20-31"},
+		{"arrecadacao", 'O', segmentOPaymentIDStart, segmentOPaymentIDEnd, "22", "91", "341-O-22-91"},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			lines := [][]byte{
+				fileHeaderBytes(bankCode, fileKindRetorno, "19072026120000"),
+				batchHeaderBytesWithPayment("0001", tt.paymentType, tt.paymentMethod),
+				detailBytesAt("0001", "00002", tt.segment, tt.idStart, tt.idEnd, "PAY-1", "02"),
+				batchTrailerBytes("0001"),
+				fileTrailerBytes(),
+			}
+			first, s := setupScanner(t, lines)
+
+			var occurrences []core.Occurrence
+			_, err := New().Parse(s, first, func(o core.Occurrence) error {
+				occurrences = append(occurrences, o)
+				return nil
+			}, nil)
+			if err != nil {
+				t.Fatalf("Parse() error = %v, want nil", err)
+			}
+			if len(occurrences) != 1 {
+				t.Fatalf("got %d occurrences, want 1", len(occurrences))
+			}
+			if got := occurrences[0].Format; got != tt.want {
+				t.Errorf("Format = %q, want %q", got, tt.want)
 			}
 		})
 	}
