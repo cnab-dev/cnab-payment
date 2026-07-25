@@ -20,9 +20,11 @@ type parseState struct {
 
 	createdAt time.Time
 
-	inBatch      bool
-	currentBatch string
-	pending      []detail // consecutive detail records sharing a sequence number
+	inBatch              bool
+	currentBatch         string
+	currentPaymentType   string
+	currentPaymentMethod string
+	pending              []detail // consecutive detail records sharing a sequence number
 }
 
 func (p *parseState) run(first core.Record) (core.ParseResult, error) {
@@ -97,6 +99,8 @@ func (p *parseState) parseBatchHeader(rec core.Record) error {
 	}
 	p.inBatch = true
 	p.currentBatch = bh.BatchNumber
+	p.currentPaymentType = bh.PaymentType
+	p.currentPaymentMethod = bh.PaymentMethod
 	return nil
 }
 
@@ -139,6 +143,8 @@ func (p *parseState) parseBatchTrailer(rec core.Record) error {
 
 	p.inBatch = false
 	p.currentBatch = ""
+	p.currentPaymentType = ""
+	p.currentPaymentMethod = ""
 	return nil
 }
 
@@ -195,6 +201,9 @@ func (p *parseState) flushCurrentDetail() error {
 		if f.ConfirmationID != "" {
 			fields.ConfirmationID = f.ConfirmationID
 		}
+		if f.Segment != 0 {
+			fields.Segment = f.Segment
+		}
 		found = true
 	}
 
@@ -209,6 +218,7 @@ func (p *parseState) flushCurrentDetail() error {
 		Type:           classifyRawType(fields.RawType),
 		ConfirmationID: fields.ConfirmationID,
 		CreatedAt:      p.createdAt,
+		Format:         core.NewReceiptFormat(bankCode, fields.Segment, p.currentPaymentType, p.currentPaymentMethod),
 	}); err != nil {
 		return err
 	}

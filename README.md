@@ -17,7 +17,7 @@ import "github.com/cnab-dev/cnab-payment"
 p := cnabpayment.NewParser(cnabpayment.NewItau240LayoutParser())
 
 result, err := p.Parse(r, func(o cnabpayment.Occurrence) error {
-    fmt.Println(o.PaymentID, o.Type, o.RawType, o.CreatedAt)
+    fmt.Println(o.PaymentID, o.Type, o.RawType, o.CreatedAt, o.Format)
     return nil
 }, nil)
 ```
@@ -167,6 +167,15 @@ time, UTC-3) and attached to every occurrence in the file.
 Any other prefix maps to `UNKNOWN`; this mapping table, like all other
 Itaú-specific knowledge, lives inside `internal/itau240` — not in the
 public API.
+
+`Format` is a `ReceiptFormat` lookup key, `"BBB-S-TT-FF"`: the bank
+compensation code, the mandatory segment (`A`/`J`/`O`/`N`), and the batch
+header's "Tipo de Serviço"/"Forma de Lançamento" codes (e.g.
+`341-A-20-41` for a TED). It is populated on every occurrence, not just
+settled ones — receipts only make sense for `SETTLED` occurrences, but the
+key itself just describes the batch/segment. This library does not ship
+receipt templates; `Format` only tells a caller which one of *its own*
+templates applies.
 
 Consecutive detail records that share a batch sequence number are treated
 as one logical payment: each segment's fields are merged into the same

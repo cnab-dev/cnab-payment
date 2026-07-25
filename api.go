@@ -13,7 +13,7 @@
 //	p := cnabpayment.NewParser(cnabpayment.NewItau240LayoutParser())
 //
 //	result, err := p.Parse(r, func(o cnabpayment.Occurrence) error {
-//		fmt.Println(o.PaymentID, o.Type, o.RawType, o.CreatedAt)
+//		fmt.Println(o.PaymentID, o.Type, o.RawType, o.CreatedAt, o.Format)
 //		return nil
 //	}, nil)
 //
@@ -46,6 +46,12 @@ type Occurrence = core.Occurrence
 // OccurrenceType classifies an Occurrence's canonical outcome, independent
 // of any bank-specific raw code. Layout parsers derive it from RawType.
 type OccurrenceType = core.OccurrenceType
+
+// ReceiptFormat identifies which receipt template a settled Occurrence
+// corresponds to, as "BBB-S-TT-FF": bank compensation code, batch segment,
+// and the Febraban "Tipo de Serviço"/"Forma de Lançamento" codes. It is a
+// lookup key only — this package does not ship receipt templates.
+type ReceiptFormat = core.ReceiptFormat
 
 const (
 	// OccurrenceTypeRejected means the payment was rejected.

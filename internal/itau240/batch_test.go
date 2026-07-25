@@ -10,6 +10,7 @@ func TestDecodeBatchHeader(t *testing.T) {
 		wantErr bool
 	}{
 		{"validBatchHeader_decodesBatchNumber", batchHeaderBytes("0001"), batchHeader{BatchNumber: "0001"}, false},
+		{"validBatchHeader_decodesPaymentTypeAndMethod", batchHeaderBytesWithPayment("0001", "20", "41"), batchHeader{BatchNumber: "0001", PaymentType: "20", PaymentMethod: "41"}, false},
 		{"wrongLength_returnsError", []byte("too short"), batchHeader{}, true},
 		{"wrongRecordType_returnsError", detailBytes("0001", "00002", 'A', "", ""), batchHeader{}, true},
 	}

@@ -60,6 +60,11 @@ type occurrenceFields struct {
 	PaymentID      string
 	RawType        string
 	ConfirmationID string
+
+	// Segment is the mandatory segment (A, J, O, or N) that contributed
+	// PaymentID/RawType, used as the "S" component of ReceiptFormat.
+	// Segment Z, being complementary, never sets this.
+	Segment byte
 }
 
 // segmentExtractor pulls the occurrence-relevant fields out of a single
@@ -109,6 +114,7 @@ func extractSegmentA(d detail) (occurrenceFields, bool) {
 	return occurrenceFields{
 		PaymentID: strings.TrimSpace(string(d.Raw[segmentAPaymentIDStart:segmentAPaymentIDEnd])),
 		RawType:   strings.TrimSpace(string(d.Raw[occurrenceCodeStart:occurrenceCodeEnd])),
+		Segment:   d.Segment,
 	}, true
 }
 
@@ -116,6 +122,7 @@ func extractSegmentJ(d detail) (occurrenceFields, bool) {
 	return occurrenceFields{
 		PaymentID: strings.TrimSpace(string(d.Raw[segmentJPaymentIDStart:segmentJPaymentIDEnd])),
 		RawType:   strings.TrimSpace(string(d.Raw[occurrenceCodeStart:occurrenceCodeEnd])),
+		Segment:   d.Segment,
 	}, true
 }
 
@@ -123,6 +130,7 @@ func extractSegmentO(d detail) (occurrenceFields, bool) {
 	return occurrenceFields{
 		PaymentID: strings.TrimSpace(string(d.Raw[segmentOPaymentIDStart:segmentOPaymentIDEnd])),
 		RawType:   strings.TrimSpace(string(d.Raw[occurrenceCodeStart:occurrenceCodeEnd])),
+		Segment:   d.Segment,
 	}, true
 }
 
@@ -130,6 +138,7 @@ func extractSegmentN(d detail) (occurrenceFields, bool) {
 	return occurrenceFields{
 		PaymentID: strings.TrimSpace(string(d.Raw[segmentNPaymentIDStart:segmentNPaymentIDEnd])),
 		RawType:   strings.TrimSpace(string(d.Raw[occurrenceCodeStart:occurrenceCodeEnd])),
+		Segment:   d.Segment,
 	}, true
 }
 
