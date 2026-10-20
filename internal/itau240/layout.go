@@ -1,13 +1,14 @@
-// Package itau240 implements the LayoutParser contract required by
-// github.com/cnab-dev/cnab-payment (via internal/registry), satisfied
-// structurally without importing that package — see internal/core for the
-// shared types this depends on instead. All Itaú-specific knowledge —
-// record navigation, detail grouping, identifier extraction, and
-// occurrence-code handling — is owned here; the generic streaming
-// infrastructure remains unaware of any of it.
+// Package itau240 implements the LayoutParser and LayoutGenerator
+// contracts required by github.com/cnab-dev/cnab-payment (via
+// internal/registry), satisfied structurally without importing that
+// package — see internal/core for the shared types this depends on
+// instead. All Itaú-specific knowledge — record navigation, detail
+// grouping, identifier extraction, occurrence-code handling, and the
+// remittance record layouts — is owned here; the generic streaming and
+// writing infrastructure remains unaware of any of it.
 //
-// Only payment return files (retorno) are in scope. Remittance files and
-// CNAB400 are not supported.
+// It reads payment return files (retorno) and writes SISPAG payment
+// remittance files (remessa). CNAB400 is not supported.
 package itau240
 
 import "github.com/cnab-dev/cnab-payment/internal/core"

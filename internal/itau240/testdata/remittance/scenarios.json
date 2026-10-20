@@ -1,0 +1,4304 @@
+{
+  "createdAt": "2026-04-20T10:00:00-03:00",
+  "scenarios": [
+    {
+      "file": "salary.REM",
+      "payments": [
+        {
+          "id": "SA0001",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ANA EXEMPLO DE SOUZA",
+            "taxId": "00000100064"
+          },
+          "amount": "520.00",
+          "dueDate": "2026-04-20",
+          "settlementDate": "2026-04-20",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "01234",
+            "checkDigit": "9",
+            "type": "salary"
+          }
+        },
+        {
+          "id": "SA0002",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "BRUNO TESTE PEREIRA",
+            "taxId": "00000100145"
+          },
+          "amount": "790.00",
+          "dueDate": "2026-04-20",
+          "settlementDate": "2026-04-20",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "61111",
+            "checkDigit": "5",
+            "type": "salary"
+          }
+        },
+        {
+          "id": "SA0003",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "CARLA  FICTICIA LIMA",
+            "taxId": "00000100226"
+          },
+          "amount": "790.00",
+          "dueDate": "2026-04-20",
+          "settlementDate": "2026-04-20",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "18222",
+            "checkDigit": "4",
+            "type": "salary"
+          }
+        },
+        {
+          "id": "SA0004",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "DIEGO MODELO ROCHA",
+            "taxId": "00000100307"
+          },
+          "amount": "790.00",
+          "dueDate": "2026-04-20",
+          "settlementDate": "2026-04-20",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "35333",
+            "checkDigit": "5",
+            "type": "salary"
+          }
+        },
+        {
+          "id": "SA0005",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ELISA AMOSTRA COSTA",
+            "taxId": "00000100498"
+          },
+          "amount": "790.00",
+          "dueDate": "2026-04-20",
+          "settlementDate": "2026-04-20",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "98444",
+            "checkDigit": "0",
+            "type": "salary"
+          }
+        },
+        {
+          "id": "SA0006",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "FABIO EXEMPLAR NUNES",
+            "taxId": "00000100579"
+          },
+          "amount": "790.00",
+          "dueDate": "2026-04-20",
+          "settlementDate": "2026-04-20",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "23555",
+            "checkDigit": "6",
+            "type": "salary"
+          }
+        }
+      ]
+    },
+    {
+      "file": "ted.REM",
+      "payments": [
+        {
+          "id": "TE0001",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO BETULA",
+            "taxId": "00000091000165",
+            "address": {
+              "street": "RUA FICTICIA BETULA",
+              "number": "110",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000010"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10038",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "COND EXEMPLO BETULA",
+            "taxId": "00000091000165",
+            "address": {
+              "street": "RUA FICTICIA BETULA",
+              "number": "110",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000010"
+            }
+          },
+          "amount": "100000.00",
+          "dueDate": "2026-04-20",
+          "settlementDate": "2026-04-20",
+          "rail": "ted",
+          "bankAccount": {
+            "bankCode": "237",
+            "branch": "0321",
+            "number": "0004567",
+            "checkDigit": "3",
+            "type": "checking"
+          }
+        }
+      ]
+    },
+    {
+      "file": "pix-taxid-single.REM",
+      "payments": [
+        {
+          "id": "PA0001",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO CEDRO",
+            "taxId": "00000092000100",
+            "address": {
+              "street": "RUA FICTICIA CEDRO",
+              "number": "120",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000020"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10075",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ANA EXEMPLO DE SOUZA",
+            "taxId": "00000100064"
+          },
+          "amount": "200.00",
+          "dueDate": "2026-04-27",
+          "settlementDate": "2026-04-27",
+          "rail": "pix",
+          "pixKey": {
+            "type": "tax_id",
+            "value": "00000100064"
+          }
+        }
+      ]
+    },
+    {
+      "file": "checking-multi-payer.REM",
+      "payments": [
+        {
+          "id": "CC0001",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "4.07",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0002",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "5.44",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0003",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "6.81",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0004",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO BETULA",
+            "taxId": "00000091000165",
+            "address": {
+              "street": "RUA FICTICIA BETULA",
+              "number": "110",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000010"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10038",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "8.18",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0005",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO CEDRO",
+            "taxId": "00000092000100",
+            "address": {
+              "street": "RUA FICTICIA CEDRO",
+              "number": "120",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000020"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10075",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "9.55",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0006",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO DALIA",
+            "taxId": "00000093000154",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10112",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "10.92",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0007",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO EUCALIPTO",
+            "taxId": "00000094000107",
+            "address": {
+              "street": "RUA FICTICIA EUCALIPTO",
+              "number": "140",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000040"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10149",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "12.29",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0008",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO FIGUEIRA",
+            "taxId": "00000095000143",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "150",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000050"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10186",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "13.66",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0009",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO FIGUEIRA",
+            "taxId": "00000095000143",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "150",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000050"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10186",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "15.03",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0010",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO GIRASSOL",
+            "taxId": "00000096000198",
+            "address": {
+              "street": "RUA FICTICIA GIRASSOL",
+              "number": "160",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000060"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10223",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "16.40",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0011",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO HORTENSIA",
+            "taxId": "00000097000132",
+            "address": {
+              "street": "RUA FICTICIA HORTENSIA",
+              "number": "10/12/14",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000070"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10260",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "17.77",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0012",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO JASMIM",
+            "taxId": "00000098000187",
+            "address": {
+              "street": "RUA FICTICIA JASMIM",
+              "number": "180",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000080"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10297",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "19.14",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0013",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO JASMIM",
+            "taxId": "00000098000187",
+            "address": {
+              "street": "RUA FICTICIA JASMIM",
+              "number": "180",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000080"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10297",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "20.51",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0014",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO LAVANDA",
+            "taxId": "00000099000121",
+            "address": {
+              "street": "RUA FICTICIA LAVANDA",
+              "number": "190",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000090"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10334",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "21.88",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0015",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO MAGNOLIA",
+            "taxId": "00000100000118",
+            "address": {
+              "street": "RUA FICTICIA MAGNOLIA",
+              "number": "200",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000100"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10371",
+            "checkDigit": "7",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "23.25",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0016",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO NOGUEIRA",
+            "taxId": "00000101000162",
+            "address": {
+              "street": "RUA FICTICIA NOGUEIRA",
+              "number": "210",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000110"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10408",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "24.62",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0017",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO NOGUEIRA",
+            "taxId": "00000101000162",
+            "address": {
+              "street": "RUA FICTICIA NOGUEIRA",
+              "number": "210",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000110"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10408",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "25.99",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0018",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO PITANGUEIRA",
+            "taxId": "00000102000107",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10445",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "27.36",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0019",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO QUARESMEIRA",
+            "taxId": "00000103000151",
+            "address": {
+              "street": "RUA FICTICIA QUARESMEIRA",
+              "number": "230",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000130"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10482",
+            "checkDigit": "8",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "28.73",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0020",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ROSEIRA",
+            "taxId": "00000104000104",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "240",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000140"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10519",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "30.10",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0021",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO SALGUEIRO",
+            "taxId": "00000105000140",
+            "address": {
+              "street": "RUA FICTICIA SALGUEIRO",
+              "number": "250",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000150"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10556",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "31.47",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0022",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO TULIPA",
+            "taxId": "00000106000195",
+            "address": {
+              "street": "RUA FICTICIA TULIPA",
+              "number": "10/12/14",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000160"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10593",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "32.84",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0023",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO URUCUM",
+            "taxId": "00000107000130",
+            "address": {
+              "street": "RUA FICTICIA URUCUM",
+              "number": "270",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000170"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10630",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "34.21",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0024",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO VIOLETA",
+            "taxId": "00000108000184",
+            "address": {
+              "street": "RUA FICTICIA VIOLETA",
+              "number": "280",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000180"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10667",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "35.58",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0025",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO XAXIM",
+            "taxId": "00000109000129",
+            "address": {
+              "street": "RUA FICTICIA XAXIM",
+              "number": "290",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000190"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10704",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "36.95",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0026",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ZINIA",
+            "taxId": "00000110000153",
+            "address": {
+              "street": "RUA FICTICIA ZINIA",
+              "number": "300",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000200"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10741",
+            "checkDigit": "7",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "38.32",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0027",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ALECRIM",
+            "taxId": "00000111000106",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10778",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "39.69",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0028",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO BAMBU",
+            "taxId": "00000112000142",
+            "address": {
+              "street": "RUA FICTICIA BAMBU",
+              "number": "320",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000220"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10815",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "41.06",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0029",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO BAMBU",
+            "taxId": "00000112000142",
+            "address": {
+              "street": "RUA FICTICIA BAMBU",
+              "number": "320",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000220"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10815",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "42.43",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0030",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO CAMELIA",
+            "taxId": "00000113000197",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "330",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000230"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10852",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "43.80",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        },
+        {
+          "id": "CC0031",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO AZALEIA",
+            "taxId": "00000114000131",
+            "address": {
+              "street": "RUA FICTICIA AZALEIA",
+              "number": "340",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000240"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10889",
+            "checkDigit": "8",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ESCRITORIO EXEMPLO DE CONTABILIDADE",
+            "taxId": "00000501000178"
+          },
+          "amount": "45.17",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0447",
+            "number": "09999",
+            "checkDigit": "5",
+            "type": "checking"
+          }
+        }
+      ]
+    },
+    {
+      "file": "salary-and-boleto.REM",
+      "payments": [
+        {
+          "id": "SB0001",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "CARLA  FICTICIA LIMA",
+            "taxId": "00000100226"
+          },
+          "amount": "630.00",
+          "dueDate": "2026-04-27",
+          "settlementDate": "2026-04-27",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "39000",
+            "checkDigit": "1",
+            "type": "salary"
+          }
+        },
+        {
+          "id": "SB0002",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "DIEGO MODELO ROCHA",
+            "taxId": "00000100307"
+          },
+          "amount": "630.00",
+          "dueDate": "2026-04-27",
+          "settlementDate": "2026-04-27",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "40111",
+            "checkDigit": "2",
+            "type": "salary"
+          }
+        },
+        {
+          "id": "SB0003",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO BETULA",
+            "taxId": "00000091000165",
+            "address": {
+              "street": "RUA FICTICIA BETULA",
+              "number": "110",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000010"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10038",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ELISA AMOSTRA COSTA",
+            "taxId": "00000100498"
+          },
+          "amount": "265.00",
+          "dueDate": "2026-04-27",
+          "settlementDate": "2026-04-27",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "41222",
+            "checkDigit": "5",
+            "type": "salary"
+          }
+        },
+        {
+          "id": "SB0004",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO CEDRO",
+            "taxId": "00000092000100",
+            "address": {
+              "street": "RUA FICTICIA CEDRO",
+              "number": "120",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000020"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10075",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "FABIO EXEMPLAR NUNES",
+            "taxId": "00000100579"
+          },
+          "amount": "265.00",
+          "dueDate": "2026-04-27",
+          "settlementDate": "2026-04-27",
+          "rail": "tef",
+          "bankAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "42333",
+            "checkDigit": "9",
+            "type": "salary"
+          }
+        },
+        {
+          "id": "SB0005",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO DALIA",
+            "taxId": "00000093000154",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10112",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "BENEFICIOS EXEMPLO SERVICOS DE GESTAO DE DESPESAS E FROTA",
+            "taxId": "00000502000112"
+          },
+          "amount": "925.00",
+          "dueDate": "2026-05-24",
+          "settlementDate": "2026-04-27",
+          "barcode": "34191145600000925000000000000000000000001000"
+        },
+        {
+          "id": "SB0006",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO EUCALIPTO",
+            "taxId": "00000094000107",
+            "address": {
+              "street": "RUA FICTICIA EUCALIPTO",
+              "number": "140",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000040"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10149",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "BENEFICIOS EXEMPLO SERVICOS DE GESTAO DE DESPESAS E FROTA",
+            "taxId": "00000502000112"
+          },
+          "amount": "515.00",
+          "dueDate": "2026-05-24",
+          "settlementDate": "2026-04-27",
+          "barcode": "34191145600000515000000000000000000000001001"
+        },
+        {
+          "id": "SB0007",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO FIGUEIRA",
+            "taxId": "00000095000143",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "150",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000050"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10186",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "BENEFICIOS EXEMPLO SERVICOS DE GESTAO DE DESPESAS E FROTA",
+            "taxId": "00000502000112"
+          },
+          "amount": "530.00",
+          "dueDate": "2026-05-24",
+          "settlementDate": "2026-04-27",
+          "barcode": "34191145600000530000000000000000000000001002"
+        },
+        {
+          "id": "SB0008",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO GIRASSOL",
+            "taxId": "00000096000198",
+            "address": {
+              "street": "RUA FICTICIA GIRASSOL",
+              "number": "160",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000060"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10223",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "BENEFICIOS EXEMPLO SERVICOS DE GESTAO DE DESPESAS E FROTA",
+            "taxId": "00000502000112"
+          },
+          "amount": "130.00",
+          "dueDate": "2026-05-24",
+          "settlementDate": "2026-04-27",
+          "barcode": "34193145600000130000000000000000000000001003"
+        },
+        {
+          "id": "SB0009",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO HORTENSIA",
+            "taxId": "00000097000132",
+            "address": {
+              "street": "RUA FICTICIA HORTENSIA",
+              "number": "10/12/14",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000070"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10260",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "BENEFICIOS EXEMPLO SERVICOS DE GESTAO DE DESPESAS E FROTA",
+            "taxId": "00000502000112"
+          },
+          "amount": "715.00",
+          "dueDate": "2026-05-24",
+          "settlementDate": "2026-04-27",
+          "barcode": "34191145600000715000000000000000000000001004"
+        },
+        {
+          "id": "SB0010",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO JASMIM",
+            "taxId": "00000098000187",
+            "address": {
+              "street": "RUA FICTICIA JASMIM",
+              "number": "180",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000080"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10297",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "BENEFICIOS EXEMPLO SERVICOS DE GESTAO DE DESPESAS E FROTA",
+            "taxId": "00000502000112"
+          },
+          "amount": "1010.40",
+          "dueDate": "2026-05-24",
+          "settlementDate": "2026-04-27",
+          "barcode": "34195145600001010400000000000000000000001005"
+        },
+        {
+          "id": "SB0011",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO DALIA",
+            "taxId": "00000093000154",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10112",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "TRANSPORTES MODELO",
+            "taxId": "00000503002291"
+          },
+          "amount": "265.00",
+          "dueDate": "2026-05-23",
+          "settlementDate": "2026-04-27",
+          "barcode": "03393145500000265000000000000000000000002000"
+        },
+        {
+          "id": "SB0012",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO LAVANDA",
+            "taxId": "00000099000121",
+            "address": {
+              "street": "RUA FICTICIA LAVANDA",
+              "number": "190",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000090"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10334",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "TRANSPORTES MODELO",
+            "taxId": "00000503002291"
+          },
+          "amount": "85.00",
+          "dueDate": "2026-05-22",
+          "settlementDate": "2026-04-27",
+          "barcode": "03398145400000085000000000000000000000002001"
+        },
+        {
+          "id": "SB0013",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO MAGNOLIA",
+            "taxId": "00000100000118",
+            "address": {
+              "street": "RUA FICTICIA MAGNOLIA",
+              "number": "200",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000100"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10371",
+            "checkDigit": "7",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "TRANSPORTES MODELO",
+            "taxId": "00000503002291"
+          },
+          "amount": "130.00",
+          "dueDate": "2026-05-22",
+          "settlementDate": "2026-04-27",
+          "barcode": "03391145400000130000000000000000000000002002"
+        },
+        {
+          "id": "SB0014",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO NOGUEIRA",
+            "taxId": "00000101000162",
+            "address": {
+              "street": "RUA FICTICIA NOGUEIRA",
+              "number": "210",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000110"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10408",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "TRANSPORTES MODELO",
+            "taxId": "00000503002291"
+          },
+          "amount": "150.32",
+          "dueDate": "2026-05-03",
+          "settlementDate": "2026-04-27",
+          "barcode": "03397143500000150320000000000000000000002003"
+        },
+        {
+          "id": "SB0015",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO PITANGUEIRA",
+            "taxId": "00000102000107",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10445",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "TRANSPORTES MODELO",
+            "taxId": "00000503002291"
+          },
+          "amount": "275.00",
+          "dueDate": "2026-05-22",
+          "settlementDate": "2026-04-27",
+          "barcode": "03395145400000275000000000000000000000002004"
+        },
+        {
+          "id": "SB0016",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO QUARESMEIRA",
+            "taxId": "00000103000151",
+            "address": {
+              "street": "RUA FICTICIA QUARESMEIRA",
+              "number": "230",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000130"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10482",
+            "checkDigit": "8",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "TRANSPORTES MODELO",
+            "taxId": "00000503002291"
+          },
+          "amount": "275.00",
+          "dueDate": "2026-05-23",
+          "settlementDate": "2026-04-27",
+          "barcode": "03399145500000275000000000000000000000002005"
+        },
+        {
+          "id": "SB0017",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO ROSEIRA",
+            "taxId": "00000104000104",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "240",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000140"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10519",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "TRANSPORTES MODELO",
+            "taxId": "00000503002291"
+          },
+          "amount": "265.00",
+          "dueDate": "2026-05-22",
+          "settlementDate": "2026-04-27",
+          "barcode": "03397145400000265000000000000000000000002006"
+        }
+      ]
+    },
+    {
+      "file": "boleto.REM",
+      "payments": [
+        {
+          "id": "BO0001",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ELEVADORES EXEMPLO PAULISTA",
+            "taxId": "00000510000169"
+          },
+          "amount": "470.41",
+          "dueDate": "2026-05-05",
+          "settlementDate": "2026-05-04",
+          "barcode": "34198143700000470410000000000000000000003000"
+        },
+        {
+          "id": "BO0002",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO BETULA",
+            "taxId": "00000091000165",
+            "address": {
+              "street": "RUA FICTICIA BETULA",
+              "number": "110",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000010"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10038",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "MARIA EXEMPLO PRESTADORA",
+            "taxId": "00000511000103"
+          },
+          "amount": "95.00",
+          "dueDate": "2026-05-05",
+          "settlementDate": "2026-05-04",
+          "barcode": "34195143700000095000000000000000000000003001"
+        },
+        {
+          "id": "BO0003",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO CEDRO",
+            "taxId": "00000092000100",
+            "address": {
+              "street": "RUA FICTICIA CEDRO",
+              "number": "120",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000020"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10075",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ELEVADORES TESTE ",
+            "taxId": "00000512000158"
+          },
+          "amount": "650.40",
+          "dueDate": "2026-04-30",
+          "settlementDate": "2026-04-29",
+          "barcode": "34198143200000650400000000000000000000003002"
+        },
+        {
+          "id": "BO0004",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO DALIA",
+            "taxId": "00000093000154",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10112",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "LOJA MODELO DE TINTAS",
+            "taxId": "00000513000445"
+          },
+          "amount": "295.00",
+          "dueDate": "2026-05-20",
+          "settlementDate": "2026-05-19",
+          "barcode": "34191145200000295000000000000000000000003003"
+        },
+        {
+          "id": "BO0005",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO EUCALIPTO",
+            "taxId": "00000094000107",
+            "address": {
+              "street": "RUA FICTICIA EUCALIPTO",
+              "number": "140",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000040"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10149",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "MANUTENCAO EXEMPLO DE ELEVADORES",
+            "taxId": "00000515000191"
+          },
+          "amount": "530.96",
+          "dueDate": "2026-04-30",
+          "settlementDate": "2026-04-29",
+          "barcode": "74891143200000530960000000000000000000003004"
+        },
+        {
+          "id": "BO0006",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO CEDRO",
+            "taxId": "00000092000100",
+            "address": {
+              "street": "RUA FICTICIA CEDRO",
+              "number": "120",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000020"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10075",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "PRESTADORA FICTICIA DE LIMPEZA, DESENTUPIMENTO E DEDETIZACAO",
+            "taxId": "00000514000147"
+          },
+          "amount": "285.73",
+          "dueDate": "2026-04-30",
+          "settlementDate": "2026-04-29",
+          "barcode": "00191143200000285730000000000000000000003005"
+        },
+        {
+          "id": "BO0007",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO CEDRO",
+            "taxId": "00000092000100",
+            "address": {
+              "street": "RUA FICTICIA CEDRO",
+              "number": "120",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000020"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10075",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "PRESTADORA FICTICIA DE LIMPEZA, DESENTUPIMENTO E DEDETIZACAO",
+            "taxId": "00000514000147"
+          },
+          "amount": "285.72",
+          "dueDate": "2026-05-29",
+          "settlementDate": "2026-05-28",
+          "barcode": "00191146100000285720000000000000000000003006"
+        },
+        {
+          "id": "BO0008",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO FIGUEIRA",
+            "taxId": "00000095000143",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "150",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000050"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10186",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "SERVICOS FICTICIOS QUINTANA",
+            "taxId": "00000516000136"
+          },
+          "amount": "420.80",
+          "dueDate": "2026-05-18",
+          "settlementDate": "2026-05-15",
+          "barcode": "07793145000000420800000000000000000000003007"
+        },
+        {
+          "id": "BO0009",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO GIRASSOL",
+            "taxId": "00000096000198",
+            "address": {
+              "street": "RUA FICTICIA GIRASSOL",
+              "number": "160",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000060"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10223",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "INFORMATICA EXEMPLO",
+            "taxId": "00000517000180"
+          },
+          "amount": "286.00",
+          "dueDate": "2026-05-01",
+          "settlementDate": "2026-04-30",
+          "barcode": "07791143300000286000000000000000000000003008"
+        }
+      ]
+    },
+    {
+      "file": "pix-taxid-multi.REM",
+      "payments": [
+        {
+          "id": "PB0001",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "DIEGO MODELO ROCHA ME",
+            "taxId": "00000520000102"
+          },
+          "amount": "43.40",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "pix",
+          "pixKey": {
+            "type": "tax_id",
+            "value": "00000520000102"
+          }
+        },
+        {
+          "id": "PB0002",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO BETULA",
+            "taxId": "00000091000165",
+            "address": {
+              "street": "RUA FICTICIA BETULA",
+              "number": "110",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000010"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10038",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "BRUNO TESTE PEREIRA",
+            "taxId": "00000100145"
+          },
+          "amount": "890.00",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "pix",
+          "pixKey": {
+            "type": "tax_id",
+            "value": "00000100145"
+          }
+        },
+        {
+          "id": "PB0003",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO BETULA",
+            "taxId": "00000091000165",
+            "address": {
+              "street": "RUA FICTICIA BETULA",
+              "number": "110",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000010"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10038",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "BRUNO TESTE PEREIRA",
+            "taxId": "00000100145"
+          },
+          "amount": "3115.00",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "pix",
+          "pixKey": {
+            "type": "tax_id",
+            "value": "00000100145"
+          }
+        },
+        {
+          "id": "PB0004",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO BETULA",
+            "taxId": "00000091000165",
+            "address": {
+              "street": "RUA FICTICIA BETULA",
+              "number": "110",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000010"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10038",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "BRUNO TESTE PEREIRA",
+            "taxId": "00000100145"
+          },
+          "amount": "3115.00",
+          "dueDate": "2026-05-20",
+          "settlementDate": "2026-05-20",
+          "rail": "pix",
+          "pixKey": {
+            "type": "tax_id",
+            "value": "00000100145"
+          }
+        },
+        {
+          "id": "PB0005",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO CEDRO",
+            "taxId": "00000092000100",
+            "address": {
+              "street": "RUA FICTICIA CEDRO",
+              "number": "120",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000020"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10075",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "ELISA AMOSTRA COSTA",
+            "taxId": "00000100498"
+          },
+          "amount": "54.00",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "pix",
+          "pixKey": {
+            "type": "tax_id",
+            "value": "00000100498"
+          }
+        }
+      ]
+    },
+    {
+      "file": "pix-email.REM",
+      "payments": [
+        {
+          "id": "PE0001",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO DALIA",
+            "taxId": "00000093000154",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10112",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "FABIO EXEMPLAR NUNES",
+            "taxId": "00000100579"
+          },
+          "amount": "250.00",
+          "dueDate": "2026-04-02",
+          "settlementDate": "2026-04-02",
+          "rail": "pix",
+          "pixKey": {
+            "type": "email",
+            "value": "fabio.exemplar@example.com"
+          }
+        },
+        {
+          "id": "PE0002",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO EUCALIPTO",
+            "taxId": "00000094000107",
+            "address": {
+              "street": "RUA FICTICIA EUCALIPTO",
+              "number": "140",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000040"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10149",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "HELENA TESTE MARTINS",
+            "taxId": "00000100811"
+          },
+          "amount": "250.00",
+          "dueDate": "2026-04-02",
+          "settlementDate": "2026-04-02",
+          "rail": "pix",
+          "pixKey": {
+            "type": "tax_id",
+            "value": "00000100811"
+          }
+        }
+      ]
+    },
+    {
+      "file": "pix-phone.REM",
+      "payments": [
+        {
+          "id": "PF0001",
+          "kind": "transfer",
+          "payer": {
+            "name": "COND EXEMPLO FIGUEIRA",
+            "taxId": "00000095000143",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "150",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000050"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10186",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "João da Silva Exemplo",
+            "taxId": "00000100730"
+          },
+          "amount": "199.82",
+          "dueDate": "2026-04-23",
+          "settlementDate": "2026-04-23",
+          "rail": "pix",
+          "pixKey": {
+            "type": "phone",
+            "value": "+5511900000001"
+          }
+        }
+      ]
+    },
+    {
+      "file": "tax-collection-27.REM",
+      "payments": [
+        {
+          "id": "TA0001",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "15.12",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85860000000151203850000000000000000000004000"
+        },
+        {
+          "id": "TA0002",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO BETULA",
+            "taxId": "00000091000165",
+            "address": {
+              "street": "RUA FICTICIA BETULA",
+              "number": "110",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000010"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10038",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "346.69",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85810000003466903850000000000000000000004001"
+        },
+        {
+          "id": "TA0003",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO CEDRO",
+            "taxId": "00000092000100",
+            "address": {
+              "street": "RUA FICTICIA CEDRO",
+              "number": "120",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000020"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10075",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "678.26",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85880000006782603850000000000000000000004002"
+        },
+        {
+          "id": "TA0004",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO DALIA",
+            "taxId": "00000093000154",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10112",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "1009.83",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85890000010098303850000000000000000000004003"
+        },
+        {
+          "id": "TA0005",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO EUCALIPTO",
+            "taxId": "00000094000107",
+            "address": {
+              "street": "RUA FICTICIA EUCALIPTO",
+              "number": "140",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000040"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10149",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "1341.40",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85850000013414003850000000000000000000004004"
+        },
+        {
+          "id": "TA0006",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO FIGUEIRA",
+            "taxId": "00000095000143",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "150",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000050"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10186",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "1672.97",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85800000016729703850000000000000000000004005"
+        },
+        {
+          "id": "TA0007",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO GIRASSOL",
+            "taxId": "00000096000198",
+            "address": {
+              "street": "RUA FICTICIA GIRASSOL",
+              "number": "160",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000060"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10223",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "2004.54",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85860000020045403850000000000000000000004006"
+        },
+        {
+          "id": "TA0008",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO HORTENSIA",
+            "taxId": "00000097000132",
+            "address": {
+              "street": "RUA FICTICIA HORTENSIA",
+              "number": "10/12/14",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000070"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10260",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "2336.11",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85820000023361103850000000000000000000004007"
+        },
+        {
+          "id": "TA0009",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO JASMIM",
+            "taxId": "00000098000187",
+            "address": {
+              "street": "RUA FICTICIA JASMIM",
+              "number": "180",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000080"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10297",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "2667.68",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85880000026676803850000000000000000000004008"
+        },
+        {
+          "id": "TA0010",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO LAVANDA",
+            "taxId": "00000099000121",
+            "address": {
+              "street": "RUA FICTICIA LAVANDA",
+              "number": "190",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000090"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10334",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "2999.25",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85840000029992503850000000000000000000004009"
+        },
+        {
+          "id": "TA0011",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO MAGNOLIA",
+            "taxId": "00000100000118",
+            "address": {
+              "street": "RUA FICTICIA MAGNOLIA",
+              "number": "200",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000100"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10371",
+            "checkDigit": "7",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "3330.82",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85800000033308203850000000000000000000004010"
+        },
+        {
+          "id": "TA0012",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO NOGUEIRA",
+            "taxId": "00000101000162",
+            "address": {
+              "street": "RUA FICTICIA NOGUEIRA",
+              "number": "210",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000110"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10408",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "3662.39",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85800000036623903850000000000000000000004011"
+        },
+        {
+          "id": "TA0013",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO PITANGUEIRA",
+            "taxId": "00000102000107",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10445",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "3993.96",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85820000039939603850000000000000000000004012"
+        },
+        {
+          "id": "TA0014",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO QUARESMEIRA",
+            "taxId": "00000103000151",
+            "address": {
+              "street": "RUA FICTICIA QUARESMEIRA",
+              "number": "230",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000130"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10482",
+            "checkDigit": "8",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "4325.53",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85880000043255303850000000000000000000004013"
+        },
+        {
+          "id": "TA0015",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO ROSEIRA",
+            "taxId": "00000104000104",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "240",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000140"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10519",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "4657.10",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85840000046571003850000000000000000000004014"
+        },
+        {
+          "id": "TA0016",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO SALGUEIRO",
+            "taxId": "00000105000140",
+            "address": {
+              "street": "RUA FICTICIA SALGUEIRO",
+              "number": "250",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000150"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10556",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "4988.67",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85800000049886703850000000000000000000004015"
+        },
+        {
+          "id": "TA0017",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO TULIPA",
+            "taxId": "00000106000195",
+            "address": {
+              "street": "RUA FICTICIA TULIPA",
+              "number": "10/12/14",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000160"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10593",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "5320.24",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85850000053202403850000000000000000000004016"
+        },
+        {
+          "id": "TA0018",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO URUCUM",
+            "taxId": "00000107000130",
+            "address": {
+              "street": "RUA FICTICIA URUCUM",
+              "number": "270",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000170"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10630",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "5651.81",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85870000056518103850000000000000000000004017"
+        },
+        {
+          "id": "TA0019",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO VIOLETA",
+            "taxId": "00000108000184",
+            "address": {
+              "street": "RUA FICTICIA VIOLETA",
+              "number": "280",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000180"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10667",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "5983.38",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85870000059833803850000000000000000000004018"
+        },
+        {
+          "id": "TA0020",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO XAXIM",
+            "taxId": "00000109000129",
+            "address": {
+              "street": "RUA FICTICIA XAXIM",
+              "number": "290",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000190"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10704",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "6314.95",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85880000063149503850000000000000000000004019"
+        },
+        {
+          "id": "TA0021",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO ZINIA",
+            "taxId": "00000110000153",
+            "address": {
+              "street": "RUA FICTICIA ZINIA",
+              "number": "300",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000200"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10741",
+            "checkDigit": "7",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "6646.52",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85800000066465203850000000000000000000004020"
+        },
+        {
+          "id": "TA0022",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO ALECRIM",
+            "taxId": "00000111000106",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10778",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "6978.09",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85800000069780903850000000000000000000004021"
+        },
+        {
+          "id": "TA0023",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO BAMBU",
+            "taxId": "00000112000142",
+            "address": {
+              "street": "RUA FICTICIA BAMBU",
+              "number": "320",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000220"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10815",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "7309.66",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85800000073096603850000000000000000000004022"
+        },
+        {
+          "id": "TA0024",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO CAMELIA",
+            "taxId": "00000113000197",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "330",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000230"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10852",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "7641.23",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85870000076412303850000000000000000000004023"
+        },
+        {
+          "id": "TA0025",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO AZALEIA",
+            "taxId": "00000114000131",
+            "address": {
+              "street": "RUA FICTICIA AZALEIA",
+              "number": "340",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000240"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10889",
+            "checkDigit": "8",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "7972.80",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85890000079728003850000000000000000000004024"
+        },
+        {
+          "id": "TA0026",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO BROMELIA",
+            "taxId": "00000115000186",
+            "address": {
+              "street": "RUA FICTICIA BROMELIA",
+              "number": "10/12/14",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000250"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10926",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "8304.37",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85880000083043703850000000000000000000004025"
+        },
+        {
+          "id": "TA0027",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO CRAVO",
+            "taxId": "00000116000120",
+            "address": {
+              "street": "RUA FICTICIA CRAVO",
+              "number": "360",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000260"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10963",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "8635.94",
+          "dueDate": "2026-04-16",
+          "settlementDate": "2026-04-16",
+          "barcode": "85800000086359403850000000000000000000004026"
+        }
+      ]
+    },
+    {
+      "file": "tax-collection-26.REM",
+      "payments": [
+        {
+          "id": "TB0001",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO ACACIA",
+            "taxId": "00000090000110",
+            "address": {
+              "street": "RUA FICTICIA ACACIA",
+              "number": "100",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000000"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10001",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "15.12",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85860000000151203850000000000000000000004000"
+        },
+        {
+          "id": "TB0002",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO BETULA",
+            "taxId": "00000091000165",
+            "address": {
+              "street": "RUA FICTICIA BETULA",
+              "number": "110",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000010"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10038",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "346.69",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85810000003466903850000000000000000000004001"
+        },
+        {
+          "id": "TB0003",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO CEDRO",
+            "taxId": "00000092000100",
+            "address": {
+              "street": "RUA FICTICIA CEDRO",
+              "number": "120",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000020"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10075",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "678.26",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85880000006782603850000000000000000000004002"
+        },
+        {
+          "id": "TB0004",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO DALIA",
+            "taxId": "00000093000154",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10112",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "1009.83",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85890000010098303850000000000000000000004003"
+        },
+        {
+          "id": "TB0005",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO EUCALIPTO",
+            "taxId": "00000094000107",
+            "address": {
+              "street": "RUA FICTICIA EUCALIPTO",
+              "number": "140",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000040"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10149",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "1341.40",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85850000013414003850000000000000000000004004"
+        },
+        {
+          "id": "TB0006",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO FIGUEIRA",
+            "taxId": "00000095000143",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "150",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000050"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10186",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "1672.97",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85800000016729703850000000000000000000004005"
+        },
+        {
+          "id": "TB0007",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO GIRASSOL",
+            "taxId": "00000096000198",
+            "address": {
+              "street": "RUA FICTICIA GIRASSOL",
+              "number": "160",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000060"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10223",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "2004.54",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85860000020045403850000000000000000000004006"
+        },
+        {
+          "id": "TB0008",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO HORTENSIA",
+            "taxId": "00000097000132",
+            "address": {
+              "street": "RUA FICTICIA HORTENSIA",
+              "number": "10/12/14",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000070"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10260",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "2336.11",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85820000023361103850000000000000000000004007"
+        },
+        {
+          "id": "TB0009",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO JASMIM",
+            "taxId": "00000098000187",
+            "address": {
+              "street": "RUA FICTICIA JASMIM",
+              "number": "180",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000080"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10297",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "2667.68",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85880000026676803850000000000000000000004008"
+        },
+        {
+          "id": "TB0010",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO LAVANDA",
+            "taxId": "00000099000121",
+            "address": {
+              "street": "RUA FICTICIA LAVANDA",
+              "number": "190",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000090"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10334",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "2999.25",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85840000029992503850000000000000000000004009"
+        },
+        {
+          "id": "TB0011",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO MAGNOLIA",
+            "taxId": "00000100000118",
+            "address": {
+              "street": "RUA FICTICIA MAGNOLIA",
+              "number": "200",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000100"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10371",
+            "checkDigit": "7",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "3330.82",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85800000033308203850000000000000000000004010"
+        },
+        {
+          "id": "TB0012",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO NOGUEIRA",
+            "taxId": "00000101000162",
+            "address": {
+              "street": "RUA FICTICIA NOGUEIRA",
+              "number": "210",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000110"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10408",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "3662.39",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85800000036623903850000000000000000000004011"
+        },
+        {
+          "id": "TB0013",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO PITANGUEIRA",
+            "taxId": "00000102000107",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10445",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "3993.96",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85820000039939603850000000000000000000004012"
+        },
+        {
+          "id": "TB0014",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO QUARESMEIRA",
+            "taxId": "00000103000151",
+            "address": {
+              "street": "RUA FICTICIA QUARESMEIRA",
+              "number": "230",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000130"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10482",
+            "checkDigit": "8",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "4325.53",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85880000043255303850000000000000000000004013"
+        },
+        {
+          "id": "TB0015",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO ROSEIRA",
+            "taxId": "00000104000104",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "240",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000140"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10519",
+            "checkDigit": "3",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "4657.10",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85840000046571003850000000000000000000004014"
+        },
+        {
+          "id": "TB0016",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO SALGUEIRO",
+            "taxId": "00000105000140",
+            "address": {
+              "street": "RUA FICTICIA SALGUEIRO",
+              "number": "250",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000150"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10556",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "4988.67",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85800000049886703850000000000000000000004015"
+        },
+        {
+          "id": "TB0017",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO TULIPA",
+            "taxId": "00000106000195",
+            "address": {
+              "street": "RUA FICTICIA TULIPA",
+              "number": "10/12/14",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000160"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10593",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "5320.24",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85850000053202403850000000000000000000004016"
+        },
+        {
+          "id": "TB0018",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO URUCUM",
+            "taxId": "00000107000130",
+            "address": {
+              "street": "RUA FICTICIA URUCUM",
+              "number": "270",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000170"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10630",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "5651.81",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85870000056518103850000000000000000000004017"
+        },
+        {
+          "id": "TB0019",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO VIOLETA",
+            "taxId": "00000108000184",
+            "address": {
+              "street": "RUA FICTICIA VIOLETA",
+              "number": "280",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000180"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10667",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "5983.38",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85870000059833803850000000000000000000004018"
+        },
+        {
+          "id": "TB0020",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO XAXIM",
+            "taxId": "00000109000129",
+            "address": {
+              "street": "RUA FICTICIA XAXIM",
+              "number": "290",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000190"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1357",
+            "number": "10704",
+            "checkDigit": "2",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "6314.95",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85880000063149503850000000000000000000004019"
+        },
+        {
+          "id": "TB0021",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO ZINIA",
+            "taxId": "00000110000153",
+            "address": {
+              "street": "RUA FICTICIA ZINIA",
+              "number": "300",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000200"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0901",
+            "number": "10741",
+            "checkDigit": "7",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "6646.52",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85800000066465203850000000000000000000004020"
+        },
+        {
+          "id": "TB0022",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO ALECRIM",
+            "taxId": "00000111000106",
+            "address": {
+              "street": "",
+              "number": "",
+              "complement": "",
+              "city": "",
+              "state": "SP",
+              "zipCode": ""
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "1234",
+            "number": "10778",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "6978.09",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85800000069780903850000000000000000000004021"
+        },
+        {
+          "id": "TB0023",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO BAMBU",
+            "taxId": "00000112000142",
+            "address": {
+              "street": "RUA FICTICIA BAMBU",
+              "number": "320",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000220"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0567",
+            "number": "10815",
+            "checkDigit": "4",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "7309.66",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85800000073096603850000000000000000000004022"
+        },
+        {
+          "id": "TB0024",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO CAMELIA",
+            "taxId": "00000113000197",
+            "address": {
+              "street": "AVENIDA DOS PERSONAGENS FICTICIOS",
+              "number": "330",
+              "complement": "BLOCO B",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000230"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "0089",
+            "number": "10852",
+            "checkDigit": "6",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "7641.23",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85870000076412303850000000000000000000004023"
+        },
+        {
+          "id": "TB0025",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO AZALEIA",
+            "taxId": "00000114000131",
+            "address": {
+              "street": "RUA FICTICIA AZALEIA",
+              "number": "340",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000240"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "4321",
+            "number": "10889",
+            "checkDigit": "8",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "7972.80",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85890000079728003850000000000000000000004024"
+        },
+        {
+          "id": "TB0026",
+          "kind": "barcode",
+          "payer": {
+            "name": "COND EXEMPLO BROMELIA",
+            "taxId": "00000115000186",
+            "address": {
+              "street": "RUA FICTICIA BROMELIA",
+              "number": "10/12/14",
+              "complement": "",
+              "city": "CIDADE EXEMPLO",
+              "state": "SP",
+              "zipCode": "01000250"
+            }
+          },
+          "payerAccount": {
+            "bankCode": "341",
+            "branch": "2468",
+            "number": "10926",
+            "checkDigit": "5",
+            "type": "checking"
+          },
+          "payee": {
+            "name": "",
+            "taxId": ""
+          },
+          "amount": "8304.37",
+          "dueDate": "2026-03-17",
+          "settlementDate": "2026-03-17",
+          "barcode": "85880000083043703850000000000000000000004025"
+        }
+      ]
+    }
+  ]
+}
