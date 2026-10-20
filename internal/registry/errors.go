@@ -9,3 +9,7 @@ var ErrEmptyInput = errors.New("cnab-payment: input contains no records")
 // ErrNoLayoutParser is returned by Parse when no configured layout parser
 // recognizes the input file's first record.
 var ErrNoLayoutParser = errors.New("cnab-payment: no layout parser recognizes this file")
+
+// ErrNoPayments is returned by Generator.Generate when called with an
+// empty list of payments.
+var ErrNoPayments = errors.New("cnab-payment: no payments to generate")
