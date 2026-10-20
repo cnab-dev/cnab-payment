@@ -40,7 +40,7 @@ func validatePayment(p core.Payment) error {
 	case core.QRCodePayment:
 		v.qrCode(p)
 	case core.TransferPayment:
-		v.add("Rail", fmt.Errorf("%w: transfers are not supported yet", core.ErrUnsupportedRail))
+		v.transfer(p)
 	}
 	return errors.Join(v.errs...)
 }
@@ -102,5 +102,101 @@ func (v *validator) qrCode(p core.QRCodePayment) {
 	}
 	if q.Amount != 0 && q.Amount != p.Amount {
 		v.invalid("Amount", "%s differs from the QR code amount %s", p.Amount, q.Amount)
+	}
+}
+
+// transfer enforces the rail and destination translation table:
+//
+//	tef + Itaú checking, savings or salary account  → 20/01, 20/05, 30/01
+//	ted + account at another bank (any type)         → 20/41
+//	pix + Pix key                                    → 20/45, A + B
+//	pix + checking, savings or payment account       → 20/45, A
+//
+// Anything else is ErrUnsupportedRail.
+func (v *validator) transfer(p core.TransferPayment) {
+	unsupported := func(format string, args ...any) {
+		v.add("Rail", fmt.Errorf("%w: %s", core.ErrUnsupportedRail, fmt.Sprintf(format, args...)))
+	}
+
+	switch d := p.Destination.(type) {
+	case nil:
+		v.invalid("Destination", "required")
+	case core.PixKey:
+		if p.Rail != core.RailPix {
+			unsupported("a Pix key destination requires rail pix, got %q", p.Rail)
+		}
+		v.pixKey(d)
+	case core.BankAccount:
+		switch p.Rail {
+		case core.RailTEF:
+			if d.BankCode != bankCode {
+				unsupported("tef requires an account at bank %s; use ted for another bank", bankCode)
+			}
+			if d.Type == core.AccountTypePayment {
+				unsupported("tef doesn't support payment accounts")
+			}
+		case core.RailTED:
+			if d.BankCode == bankCode {
+				unsupported("use tef for an account at bank %s", bankCode)
+			}
+		case core.RailPix:
+			if d.Type == core.AccountTypeSalary {
+				unsupported("pix doesn't support salary accounts")
+			}
+		default:
+			unsupported("rail %q is not supported", p.Rail)
+		}
+		v.destinationAccount(d, p.Rail)
+	}
+}
+
+func (v *validator) destinationAccount(a core.BankAccount, rail core.Rail) {
+	switch a.Type {
+	case core.AccountTypeChecking, core.AccountTypeSavings, core.AccountTypeSalary, core.AccountTypePayment:
+	default:
+		v.invalid("Destination.Type", "unknown account type %q", a.Type)
+	}
+	if len(a.BankCode) != 3 || !isAllDigits(a.BankCode) {
+		v.invalid("Destination.BankCode", "must be exactly 3 digits")
+	}
+	if !isAllDigits(a.Branch) {
+		v.invalid("Destination.Branch", "must be non-empty digits")
+	}
+	if !isAllDigits(a.Number) {
+		v.invalid("Destination.Number", "must be non-empty digits")
+	}
+
+	// Field widths of the account formats in nota 11.
+	branchMax, numberMax, digitMax := 5, 12, 2
+	switch {
+	case a.BankCode == bankCode:
+		branchMax, numberMax, digitMax = 4, 6, 1
+	case rail == core.RailPix && a.Type == core.AccountTypePayment:
+		branchMax, numberMax, digitMax = 5, 20-len(a.CheckDigit), 2
+	}
+	if len(strings.TrimLeft(a.Branch, "0")) > branchMax {
+		v.invalid("Destination.Branch", "must have at most %d significant digits", branchMax)
+	}
+	if len(strings.TrimLeft(a.Number, "0")) > numberMax {
+		v.invalid("Destination.Number", "must have at most %d significant digits", numberMax)
+	}
+	if n := len(a.CheckDigit); n == 0 || n > digitMax {
+		v.invalid("Destination.CheckDigit", "must have 1 to %d characters", digitMax)
+	}
+}
+
+func (v *validator) pixKey(k core.PixKey) {
+	if _, ok := pixKeyTypes[k.Type]; !ok {
+		v.invalid("Destination.Type", "unknown Pix key type %q", k.Type)
+	}
+	switch {
+	case k.Value == "":
+		v.invalid("Destination.Value", "required")
+	case len(k.Value) > 100:
+		v.invalid("Destination.Value", "must have at most 100 characters")
+	case k.Type == core.PixKeyTypeTaxID:
+		if err := taxid.Validate(k.Value); err != nil {
+			v.invalid("Destination.Value", "%v", err)
+		}
 	}
 }

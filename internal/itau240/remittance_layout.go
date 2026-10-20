@@ -14,10 +14,15 @@ import (
 type batchKind int
 
 const (
-	kindCollection  batchKind = iota // arrecadação with barcode (segment O)
-	kindBoletoItau                   // boleto issued by Itaú (J + J-52)
-	kindBoletoOther                  // boleto issued by another bank (J + J-52)
-	kindPixQRCode                    // Pix QR code (J + J-52 PIX)
+	kindCollection     batchKind = iota // arrecadação with barcode (segment O)
+	kindBoletoItau                      // boleto issued by Itaú (J + J-52)
+	kindBoletoOther                     // boleto issued by another bank (J + J-52)
+	kindPixQRCode                       // Pix QR code (J + J-52 PIX)
+	kindCreditChecking                  // tef to an Itaú checking account (A)
+	kindCreditSavings                   // tef to an Itaú savings account (A)
+	kindCreditSalary                    // tef to an Itaú salary account (A)
+	kindTED                             // ted to an account at another bank (A)
+	kindPixTransfer                     // pix to a key (A + B) or to an account (A)
 )
 
 type detailFn func(p core.Payment, batch, seq int) ([]string, cnab240.BatchTotals)
@@ -35,6 +40,12 @@ var batchSpecs = map[batchKind]batchSpec{
 	kindBoletoItau:  {"20", "30", detailJ, trailerAJ},
 	kindBoletoOther: {"20", "31", detailJ, trailerAJ},
 	kindPixQRCode:   {"20", "47", detailJPix, trailerAJ},
+
+	kindCreditChecking: {"20", "01", detailA, trailerAJ},
+	kindCreditSavings:  {"20", "05", detailA, trailerAJ},
+	kindCreditSalary:   {"30", "01", detailA, trailerAJ},
+	kindTED:            {"20", "41", detailA, trailerAJ},
+	kindPixTransfer:    {"20", "45", detailA, trailerAJ},
 }
 
 // paymentKind classifies a payment already accepted by validatePayment.
@@ -51,8 +62,28 @@ func paymentKind(p core.Payment) batchKind {
 		}
 	case core.QRCodePayment:
 		return kindPixQRCode
+	case core.TransferPayment:
+		return transferKind(v)
 	}
 	panic("itau240: payment kind not accepted by Validate")
+}
+
+// transferKind maps a transfer's rail and destination to its batch kind,
+// following the translation table validateTransfer enforces.
+func transferKind(p core.TransferPayment) batchKind {
+	switch p.Rail {
+	case core.RailPix:
+		return kindPixTransfer
+	case core.RailTED:
+		return kindTED
+	}
+	switch p.Destination.(core.BankAccount).Type {
+	case core.AccountTypeSavings:
+		return kindCreditSavings
+	case core.AccountTypeSalary:
+		return kindCreditSalary
+	}
+	return kindCreditChecking
 }
 
 // remittanceLayout implements cnab240.Layout for Itaú SISPAG.

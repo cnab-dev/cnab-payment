@@ -1,6 +1,8 @@
 package itau240
 
 import (
+	"strings"
+
 	"github.com/cnab-dev/cnab-payment/internal/cnab240"
 	"github.com/cnab-dev/cnab-payment/internal/core"
 	"github.com/cnab-dev/cnab-payment/internal/pix"
@@ -217,4 +219,123 @@ func addressOf(p core.Party) core.Address {
 		return core.Address{}
 	}
 	return *p.Address
+}
+
+// Chamber (câmara centralizadora) codes for segment A positions 18-20
+// (nota 35).
+const (
+	chamberNone = "000"
+	chamberPix  = "009" // PIX (SPI)
+)
+
+// pixTransferTypes are the transfer type codes for segment A positions
+// 113-114 of a Pix transfer (nota 36).
+var pixTransferTypes = map[core.AccountType]string{
+	core.AccountTypeChecking: "01",
+	core.AccountTypePayment:  "PG",
+	core.AccountTypeSavings:  "03",
+}
+
+const pixTransferTypeKey = "04"
+
+// pixKeyTypes are the key type codes for segment B positions 15-16 (nota
+// 37).
+var pixKeyTypes = map[core.PixKeyType]string{
+	core.PixKeyTypePhone:  "01",
+	core.PixKeyTypeEmail:  "02",
+	core.PixKeyTypeTaxID:  "03",
+	core.PixKeyTypeRandom: "04",
+}
+
+// detailA builds segment A for a transfer, plus segment B when the
+// destination is a Pix key.
+func detailA(p core.Payment, batch, seq int) ([]string, cnab240.BatchTotals) {
+	tp := p.(core.TransferPayment)
+
+	chamber, bank, account, transferType := chamberNone, "", "", "00"
+	switch d := tp.Destination.(type) {
+	case core.BankAccount:
+		bank, account = d.BankCode, accountField(d, tp.Rail)
+		if tp.Rail == core.RailPix {
+			chamber, transferType = chamberPix, pixTransferTypes[d.Type]
+		}
+	case core.PixKey:
+		// Bank and account are optional for a Pix key and left blank (nota 11).
+		chamber, bank, account, transferType = chamberPix, "000", cnab240.Spaces(20), pixTransferTypeKey
+	}
+
+	segA := segmentPrefix(batch, seq, 'A') +
+		chamber +
+		cnab240.PadL(bank, 3, '0') +
+		account +
+		cnab240.PadR(tp.Payee.Name, 30, ' ') +
+		cnab240.PadR(tp.ID, 20, ' ') +
+		cnab240.FmtDate(tp.SettlementDate) +
+		"REA" +
+		cnab240.Zeros(8) + // ISPB
+		transferType +
+		cnab240.Zeros(5) +
+		cnab240.FmtAmount(tp.Amount, 15) +
+		cnab240.Spaces(15) +
+		cnab240.Spaces(5) +
+		cnab240.Zeros(8) +
+		cnab240.Zeros(15) +
+		cnab240.Spaces(18) +
+		cnab240.Spaces(2) +
+		cnab240.Zeros(6) +
+		payeeTaxID14(tp.Payee) +
+		"01" +
+		cnab240.Spaces(5) +
+		cnab240.Spaces(5) +
+		"0" +
+		cnab240.Spaces(10)
+
+	lines := []string{segA}
+	if key, ok := tp.Destination.(core.PixKey); ok {
+		lines = append(lines, segmentBPixKey(tp.PaymentBase, key, batch, seq))
+	}
+	return lines, cnab240.BatchTotals{RecordCount: len(lines), PaymentCount: 1, TotalAmount: tp.Amount}
+}
+
+// segmentBPixKey builds segment B carrying the Pix key (notas 37 and 40).
+func segmentBPixKey(b core.PaymentBase, key core.PixKey, batch, seq int) string {
+	return bankCode + cnab240.FmtInt(batch, 4) + "3" + cnab240.FmtInt(seq, 5) + "B" +
+		pixKeyTypes[key.Type] +
+		" " +
+		taxIDWithType14(b.Payee) +
+		cnab240.Spaces(30) +
+		cnab240.Spaces(65) +
+		cnab240.PadR(key.Value, 100, ' ') +
+		cnab240.Spaces(3) +
+		cnab240.Spaces(10)
+}
+
+// accountField builds segment A positions 24-43, the destination account,
+// in the format nota 11 requires for its bank and type.
+func accountField(a core.BankAccount, rail core.Rail) string {
+	number := strings.TrimLeft(a.Number, "0")
+	switch {
+	case a.BankCode == bankCode:
+		// Itaú: zero, branch (4), blank, zeros (6), account (6), blank, DAC.
+		return "0" + cnab240.PadL(a.Branch, 4, '0') + " " + cnab240.Zeros(6) +
+			cnab240.PadL(number, 6, '0') + " " + cnab240.PadR(a.CheckDigit, 1, ' ')
+	case rail == core.RailPix && a.Type == core.AccountTypePayment:
+		// Payment account at another bank: the account, DAC included, in 20
+		// digits. A TED to a payment account goes as a checking account.
+		return cnab240.PadL(strings.TrimLeft(a.Number+a.CheckDigit, "0"), 20, '0')
+	default:
+		// Other banks: branch (5), blank, account (12), and a one- or
+		// two-character DAC in positions 42-43.
+		return cnab240.PadL(a.Branch, 5, '0') + " " + cnab240.PadL(number, 12, '0') +
+			cnab240.PadL(a.CheckDigit, 2, ' ')
+	}
+}
+
+// payeeTaxID14 is the payee's tax ID in segment A positions 204-217: a
+// CNPJ in 14 digits, a CPF left-aligned.
+func payeeTaxID14(p core.Party) string {
+	if taxid.IsCNPJ(p.TaxID) {
+		return cnab240.PadL(p.TaxID, 14, '0')
+	}
+	return cnab240.PadR(p.TaxID, 14, ' ')
 }

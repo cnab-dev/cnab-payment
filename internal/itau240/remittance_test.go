@@ -233,13 +233,6 @@ func TestValidate_Barcode(t *testing.T) {
 	}
 }
 
-func TestValidate_TransfersNotSupportedYet(t *testing.T) {
-	p := core.TransferPayment{PaymentBase: qrCodePayment().PaymentBase, Rail: core.RailTEF}
-	if err := validatePayment(p); !errors.Is(err, core.ErrUnsupportedRail) {
-		t.Errorf("expected ErrUnsupportedRail, got %v", err)
-	}
-}
-
 func TestClass(t *testing.T) {
 	base := qrCodePayment().PaymentBase
 	cases := []struct {

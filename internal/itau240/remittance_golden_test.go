@@ -132,9 +132,6 @@ func TestGenerate_Golden(t *testing.T) {
 		t.Run(sc.File, func(t *testing.T) {
 			var payments []core.Payment
 			for _, fp := range sc.Payments {
-				if fp.Kind == "transfer" {
-					t.Skip("transfers are not supported yet")
-				}
 				payments = append(payments, fp.toCore(t))
 			}
 
