@@ -949,3 +949,43 @@ func TestParse_ScannerErrorAfterFileTrailer_ReturnsScannerError(t *testing.T) {
 		t.Fatalf("Parse() error = %v, want %v", err, wantErr)
 	}
 }
+
+func TestParse_SegmentJ52_IsIgnoredAsComplement(t *testing.T) {
+	// A J-52 PIX record carries the QR code URL in columns 132-208 and the
+	// TXID in 209-240, overlapping where segment J has its payment ID and
+	// occurrence code.
+	j52 := detailBytesAt("0001", "00001", 'J', segmentJPaymentIDStart, segmentJPaymentIDEnd, "", "")
+	setField(j52, 17, 19, "52")
+	setField(j52, 131, 208, "pix.example.com/api/v2/cobv/0a1b2c3d4e5f60718293a4b5c6d7e8f9")
+	setField(j52, 208, 240, "TXIDWITHMORETHANTWENTYTWOCHARS01")
+
+	lines := [][]byte{
+		fileHeaderBytes(bankCode, fileKindRetorno, "19072026120000"),
+		batchHeaderBytesWithPayment("0001", "20", "47"),
+		detailBytesAt("0001", "00001", 'J', segmentJPaymentIDStart, segmentJPaymentIDEnd, "PAY-1", "00"),
+		j52,
+		batchTrailerBytes("0001"),
+		fileTrailerBytes(),
+	}
+	first, s := setupScanner(t, lines)
+
+	var occurrences []core.Occurrence
+	var recordErrs []core.RecordError
+	_, err := New().Parse(s, first,
+		func(o core.Occurrence) error { occurrences = append(occurrences, o); return nil },
+		func(re core.RecordError) error { recordErrs = append(recordErrs, re); return nil },
+	)
+	if err != nil {
+		t.Fatalf("Parse() error = %v, want nil", err)
+	}
+	if len(recordErrs) != 0 {
+		t.Fatalf("got %d record errors, want 0: %v", len(recordErrs), recordErrs)
+	}
+	if len(occurrences) != 1 {
+		t.Fatalf("got %d occurrences, want 1", len(occurrences))
+	}
+	got := occurrences[0]
+	if got.PaymentID != "PAY-1" || got.RawType != "00" || got.Format != "341-J-20-47" {
+		t.Errorf("occurrence = %+v, want PaymentID=PAY-1 RawType=00 Format=341-J-20-47", got)
+	}
+}
