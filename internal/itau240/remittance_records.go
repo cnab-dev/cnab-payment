@@ -326,6 +326,12 @@ func accountField(a core.BankAccount, rail core.Rail) string {
 	default:
 		// Other banks: branch (5), blank, account (12), and a one- or
 		// two-character DAC in positions 42-43.
+		//
+		// To be confirmed with the bank: the reference implementation writes
+		// every account in the Itaú format above, keeping the account's last
+		// 6 digits. Both formats produce the same bytes for a branch of up to
+		// 4 digits and an account of up to 6 significant digits, so they only
+		// differ for longer accounts.
 		return cnab240.PadL(a.Branch, 5, '0') + " " + cnab240.PadL(number, 12, '0') +
 			cnab240.PadL(a.CheckDigit, 2, ' ')
 	}
