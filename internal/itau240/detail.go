@@ -119,7 +119,21 @@ func extractSegmentA(d detail) (occurrenceFields, bool) {
 	}, true
 }
 
+// segmentJ52Code marks a segment J record as J-52 (columns 18-19), the
+// complement that follows a payment's segment J with the same sequence
+// number (nota 9). J-52 has no payment ID or occurrence fields: for a Pix
+// QR code, the positions segment J uses for them hold the URL and TXID.
+//
+// Skipping it is defensive: in the return files observed so far, the bank
+// echoes segment J without its J-52 (bank slips; no Pix QR code return
+// has been observed yet). If a J-52 PIX ever came back, reading it as a
+// segment J would overwrite the payment ID with part of the URL.
+const segmentJ52Code = "52"
+
 func extractSegmentJ(d detail) (occurrenceFields, bool) {
+	if string(d.Raw[17:19]) == segmentJ52Code {
+		return occurrenceFields{}, false
+	}
 	return occurrenceFields{
 		PaymentID: strings.TrimSpace(string(d.Raw[segmentJPaymentIDStart:segmentJPaymentIDEnd])),
 		RawType:   strings.TrimSpace(string(d.Raw[occurrenceCodeStart:occurrenceCodeEnd])),

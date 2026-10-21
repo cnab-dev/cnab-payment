@@ -1,14 +1,16 @@
-// Package cnabpayment streams Brazilian CNAB payment return files into a
-// canonical, bank-agnostic sequence of payment occurrences.
+// Package cnabpayment reads and writes Brazilian CNAB payment files
+// through a canonical, bank-agnostic model: it streams payment return
+// files (retorno) into payment occurrences, and writes payments into
+// remittance files (remessa).
 //
-// This is the only public package in the module: Occurrence, ParseResult,
-// RecordError, the OccurrenceHandler/RecordErrorHandler callbacks,
-// Scanner/Record, and the LayoutParser abstraction all live here. Built-in
-// layout parsers' actual implementations (currently Itaú CNAB240) are
-// under internal/ and are not importable on their own — each is exposed
-// at this package's root through a constructor, e.g.
-// NewItau240LayoutParser, so it can be passed to NewParser explicitly,
-// alone or alongside your own custom LayoutParser implementations.
+// This is the only public package in the module. Built-in layouts'
+// actual implementations (currently Itaú CNAB240) are under internal/ and
+// are not importable on their own — each is exposed at this package's root
+// through a constructor, so it can be passed explicitly to NewParser or
+// NewGenerator, alone or alongside your own implementations. There is no
+// default layout in either direction.
+//
+// # Reading return files
 //
 //	p := cnabpayment.NewParser(cnabpayment.NewItau240LayoutParser())
 //
@@ -23,10 +25,24 @@
 // onward. It never peeks, rewinds, or requires an io.Seeker, and the first
 // record is never read twice.
 //
-// NewParser requires at least one LayoutParser — there is no default.
+// # Writing remittance files
 //
-// See the repository README for project philosophy, current status, and
-// roadmap.
+//	g := cnabpayment.NewGenerator(cnabpayment.NewItau240LayoutGenerator())
+//
+//	files, err := g.Generate(payments, cnabpayment.GenerateOptions{})
+//	for _, f := range files {
+//		save(f.Class, f.PaymentIDs, f.Content)
+//	}
+//
+// A Generator writes with exactly one layout, chosen by the caller; it
+// never infers one from the payments. Every payment is validated first,
+// and a single invalid payment fails the whole call. The layout decides
+// how many files the bank requires (Itaú: Pix in a file of its own), and
+// the same payments always produce the same files. Validate checks one
+// payment ahead of time, e.g. when it's created; a payment it accepts
+// never makes Generate fail.
+//
+// See the repository README for project philosophy and current status.
 package cnabpayment
 
 import (
